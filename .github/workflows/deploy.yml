@@ -13,6 +13,10 @@ jobs:
       - name: Check out the repository
         uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2
+        with:
+          version: 6.32.9   
+
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
