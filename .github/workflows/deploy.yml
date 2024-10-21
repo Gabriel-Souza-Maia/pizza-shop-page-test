@@ -29,8 +29,10 @@ jobs:
       - name: Run predeploy script
         run: pnpm predeploy
 
-      - name: Configure Git
+      - name: Configure Git Email
         run: git config --global user.email "gsmaia23@gmail.com"
+
+      - name: Configure Git Name 
         run: git config --global user.name "Gabriel-Souza-Maia"
 
       - name: Run deploy script
