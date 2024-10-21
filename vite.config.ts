@@ -5,7 +5,7 @@ import type { UserConfig } from 'vite'
 import type { InlineConfig } from 'vitest/node'
 
 export default defineConfig({
-  base: '/pizza-shop-page-test/',
+  // base: '/pizza-shop-page-test/',
   plugins: [react()],
   resolve: {
     alias: {
