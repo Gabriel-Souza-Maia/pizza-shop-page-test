@@ -16,11 +16,13 @@ jobs:
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version: '18'  # Use the Node.js version you're working with
+          node-version: '18'  # Use a versão de Node.js que você está utilizando
           cache: 'pnpm'
 
       - name: Install PNPM
-        run: npm install -g pnpm
+        run: |
+          corepack enable
+          corepack prepare pnpm@latest --activate
 
       - name: Install dependencies
         run: pnpm install
