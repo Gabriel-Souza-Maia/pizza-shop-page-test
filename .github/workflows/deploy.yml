@@ -35,6 +35,9 @@ jobs:
       - name: Configure Git Name 
         run: git config --global user.name "Gabriel-Souza-Maia"
 
+      - name: Setup remote origin
+        run: git remote set-url origin https://Gabriel-Souza-Maia:${{ secrets.MY_PASSWORD }}@github.com/Gabriel-Souza-Maia/pizza-shop-page-test.git
+
       - name: Run deploy script
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
